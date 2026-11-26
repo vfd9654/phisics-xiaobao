@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>水果电池 · 初中物理小报</title>
+  <meta name="description" content="初中物理跨学科实践小报：用一只柚子、铜片和锌片做一节水果电池，看懂化学能怎样变成电能。含实验步骤、实测数据与可交互的模拟电压表。">
+  <link rel="stylesheet" href="index.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+  <main class="sheet" id="main">
+    <div class="wash-field" aria-hidden="true">
+      <span class="wash wash--a"></span>
+      <span class="wash wash--b"></span>
+      <span class="wash wash--c"></span>
+      <span class="wash wash--d"></span>
+    </div>
+
+    <p class="spine" aria-hidden="true">水果电池 · 2026</p>
+
+    <!-- ============ 报头 ============ -->
+    <header class="masthead" id="top">
+      <div class="masthead__meta reveal">
+        <p>初中物理 <span class="sep">·</span> 跨学科实践 <span class="sep">·</span> 实验小报</p>
+        <p class="masthead__vol">2026 秋</p>
+      </div>
+
+      <div class="masthead__body">
+        <div class="masthead__copy">
+          <p class="eyebrow reveal">FRUIT BATTERY <span class="eyebrow__cn">水果电池</span></p>
+          <h1 class="title reveal">水果电池</h1>
+          <p class="lede reveal">一只柚子、两片金属，<br>把看不见的化学能，<br class="br-wide">变成指针的一次轻颤。</p>
+          <ul class="facts reveal">
+            <li><b>0.42<small>V</small></b><span>第一只柚子电池</span></li>
+            <li><b>5<small>种</small></b><span>水果对照实验</span></li>
+          </ul>
+        </div>
+
+        <figure class="masthead__figure reveal">
+          <span class="figure__wash" aria-hidden="true"></span>
+          <img class="figure__img"
+               src="images/WatercolorLemonBatteryExperiment.png"
+               alt="水彩画：一只黄色的水果插着铜片和锌片，红黑导线连接到右侧数字电压表，屏幕读数为 0.42 V"
+               width="1695" height="928" fetchpriority="high" decoding="async">
+          <figcaption class="note note--reading">
+            <span class="note__label">电压表读数</span>
+            <b>0.42<small>V</small></b>
+            <span class="note__sub">铜片 ＋ / 锌片 －</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="masthead__rule" aria-hidden="true"></div>
+    </header>
+
+    <!-- ============ 01 提问 ============ -->
+    <section class="sec sec--discover" id="discover" aria-labelledby="discover-title">
+      <header class="sec-head reveal">
+        <span class="sec-num" aria-hidden="true">01</span>
+        <div class="sec-head__text">
+          <h2 id="discover-title">水果里，真的藏着电吗？</h2>
+          <p class="sec-en">THE QUESTION</p>
+        </div>
+        <span class="sec-line" aria-hidden="true"></span>
+      </header>
+
+      <div class="discover">
+        <div class="discover__left">
+          <blockquote class="pullquote reveal">
+            <p>“把两根不同的金属片<br>插进同一只柚子，<br>再把它们接到电压表上——<br><em>指针动了。</em>”</p>
+            <cite>—— 我们的第一次读数，2026.11.16</cite>
+          </blockquote>
+
+          <aside class="record reveal" aria-label="实验记录卡">
+            <p class="record__head">实验记录 <span>NO.01</span></p>
+            <dl>
+              <div><dt>时间</dt><dd>2026.11.16 午后</dd></div>
+              <div><dt>材料</dt><dd>柚子 · 铜片 · 锌片 · 电压表</dd></div>
+              <div><dt>读数</dt><dd class="record__value">0.42&nbsp;V <small>3&nbsp;V 档</small></dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="discover__copy reveal">
+          <p>水果的汁液里溶着果酸、柠檬酸。它们溶进水里，会“拆”成带电的离子，所以果汁和淡盐水一样，能够导电。</p>
+          <p>当两种活泼性不同的金属同时浸在果汁里，一块金属交出电子，电子沿导线跑向另一块金属。外电路里有了电流——水果，就成了一节小小的电池。</p>
+          <p class="aside">这个装置有一个正式的名字：<strong>原电池</strong>。水果电池，是它最朴素的样子。</p>
+          <p class="equation"><span>化学能</span><b aria-hidden="true">→</b><span>电能</span><small>水果电池完成的一次能量转换</small></p>
+
+          <div class="compare reveal">
+            <p class="compare__label">三个电压，做个参照</p>
+            <ul>
+              <li><b>1.5<small>V</small></b><span>一节干电池</span></li>
+              <li><b>3.8<small>V</small></b><span>手机锂电池</span></li>
+              <li class="compare__us"><b>0.42<small>V</small></b><span>我们的柚子电池</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 原理 ============ -->
+    <section class="sec sec--how" id="how" aria-labelledby="how-title">
+      <header class="sec-head reveal">
+        <span class="sec-num" aria-hidden="true">02</span>
+        <div class="sec-head__text">
+          <h2 id="how-title">两种金属，一场电子的迁徙</h2>
+          <p class="sec-en">HOW IT WORKS</p>
+        </div>
+        <span class="sec-line" aria-hidden="true"></span>
+      </header>
+
+      <div class="how">
+        <figure class="diagram reveal">
+          <svg class="diagram__svg" viewBox="0 0 620 400" role="img" aria-labelledby="diagramTitle diagramDesc">
+            <title id="diagramTitle">水果电池原理示意图</title>
+            <desc id="diagramDesc">柚子中插入铜片和锌片，用红黑导线连接到右侧电压表，读数 0.42 伏；电子从锌片经导线流向铜片，果汁中的离子在水果内部移动。</desc>
+            <defs>
+              <radialGradient id="fruitFill" cx="34%" cy="28%" r="78%">
+                <stop offset="0" stop-color="#fff3b8"/>
+                <stop offset=".42" stop-color="#f7d95f"/>
+                <stop offset=".78" stop-color="#eec23f"/>
+                <stop offset="1" stop-color="#d9a52c"/>
+              </radialGradient>
+              <linearGradient id="copperFill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#cf9161"/>
+                <stop offset=".55" stop-color="#a9633a"/>
+                <stop offset="1" stop-color="#84502f"/>
+              </linearGradient>
+              <linearGradient id="zincFill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e2e5e1"/>
+                <stop offset=".55" stop-color="#b3bab5"/>
+                <stop offset="1" stop-color="#8b948e"/>
+              </linearGradient>
+              <linearGradient id="meterFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4c554f"/>
+                <stop offset="1" stop-color="#29302c"/>
+              </linearGradient>
+              <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="12"/>
+              </filter>
+              <filter id="softSm" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="5"/>
+              </filter>
+            </defs>
+
+            <ellipse cx="205" cy="262" rx="132" ry="110" fill="#f5d96a" opacity=".24" filter="url(#soft)"/>
+            <ellipse cx="205" cy="362" rx="96" ry="11" fill="#8f7a3f" opacity=".16" filter="url(#softSm)"/>
+
+            <path class="d-fruit" d="M205 150 C258 150 302 194 303 250 C305 312 262 357 203 358 C145 359 100 315 99 253 C98 194 148 150 205 150 Z" fill="url(#fruitFill)" stroke="rgba(170,128,32,.35)" stroke-width="1.5"/>
+            <path d="M122 274 C140 240 173 226 210 234 C249 243 275 270 280 301 C264 330 230 346 200 346 C160 346 130 318 122 274 Z" fill="#dfa52c" opacity=".16" filter="url(#softSm)"/>
+            <path d="M143 190 C165 172 196 163 224 169" fill="none" stroke="#fdf4c4" stroke-width="12" stroke-linecap="round" opacity=".5" filter="url(#softSm)"/>
+            <path d="M248 209 C267 220 279 238 281 258" fill="none" stroke="#fbea99" stroke-width="9" stroke-linecap="round" opacity=".3" filter="url(#softSm)"/>
+            <ellipse cx="158" cy="220" rx="42" ry="27" fill="#fff6c9" opacity=".5" filter="url(#softSm)"/>
+            <path d="M205 150 C207 136 213 128 223 124" fill="none" stroke="#7f8f54" stroke-width="4" stroke-linecap="round"/>
+            <path d="M223 124 C246 110 268 118 270 132 C252 148 231 145 223 124 Z" fill="#93a86e" opacity=".9"/>
+
+            <g>
+              <rect x="166" y="112" width="34" height="150" rx="3" fill="url(#copperFill)" stroke="#7d4526" stroke-opacity=".35"/>
+              <rect x="171" y="116" width="5" height="140" rx="2.5" fill="#e2b48a" opacity=".4"/>
+              <circle cx="183" cy="120" r="10" fill="#fffaf0" stroke="#a9633a"/>
+              <text x="183" y="125" text-anchor="middle" class="d-badge-text">＋</text>
+            </g>
+            <g>
+              <rect x="236" y="134" width="30" height="128" rx="3" fill="url(#zincFill)" stroke="#5d6661" stroke-opacity=".3"/>
+              <circle cx="251" cy="142" r="10" fill="#fffaf0" stroke="#7d8781"/>
+              <text x="251" y="147" text-anchor="middle" class="d-badge-text d-badge-text--neg">－</text>
+            </g>
+
+            <circle cx="199" cy="197" r="3" fill="#fff3b0"/>
+            <circle cx="214" cy="189" r="2" fill="#fff3b0"/>
+            <circle cx="229" cy="201" r="2.4" fill="#fff3b0"/>
+            <circle cx="246" cy="193" r="1.8" fill="#fff3b0"/>
+
+            <text x="203" y="326" text-anchor="middle" class="d-juice">果汁 · 电解质溶液</text>
+            <text x="203" y="347" text-anchor="middle" class="d-juice-sub">自由移动的离子</text>
+
+            <path class="d-wire d-wire--cu" d="M191 114 C220 52 306 38 362 62 C368 66 372 74 372 84"/>
+            <path class="d-wire d-wire--zn" d="M255 138 C304 132 338 152 372 148"/>
+
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="0s" path="M372 84 C372 74 368 66 362 62 C306 38 220 52 191 114"/></circle>
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="1.55s" path="M372 84 C372 74 368 66 362 62 C306 38 220 52 191 114"/></circle>
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="3.1s" path="M372 84 C372 74 368 66 362 62 C306 38 220 52 191 114"/></circle>
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="0.7s" path="M255 138 C304 132 338 152 372 148"/></circle>
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="2.3s" path="M255 138 C304 132 338 152 372 148"/></circle>
+            <circle class="e-dot" r="3"><animateMotion dur="4.6s" repeatCount="indefinite" begin="3.85s" path="M255 138 C304 132 338 152 372 148"/></circle>
+
+            <text x="300" y="30" class="d-e">e⁻</text>
+            <text x="320" y="178" class="d-e">e⁻</text>
+
+            <rect x="372" y="48" width="200" height="244" rx="26" fill="url(#meterFill)" stroke="#20261f" stroke-opacity=".4"/>
+            <ellipse cx="430" cy="76" rx="54" ry="16" fill="#ffffff" opacity=".06" filter="url(#softSm)"/>
+            <rect x="390" y="68" width="164" height="136" rx="10" fill="#f8f1df" stroke="#c9c0a8" stroke-opacity=".6"/>
+            <path class="d-arc" d="M439.2 125.1 A40 40 0 0 1 504.8 125.1"/>
+            <line class="d-needle" x1="472" y1="148" x2="452" y2="113.4"/>
+            <circle cx="472" cy="148" r="4" fill="#3a433d"/>
+            <text x="472" y="184" text-anchor="middle" class="d-meter-digits">0.42</text>
+            <text x="512" y="184" text-anchor="middle" class="d-meter-v">V</text>
+            <text x="472" y="228" text-anchor="middle" class="d-meter-brand">DC VOLT</text>
+            <circle cx="472" cy="262" r="14" fill="#3c453f" stroke="#59645c"/>
+            <circle cx="472" cy="262" r="6" fill="#2a312c" stroke="#59645c"/>
+
+            <circle cx="372" cy="84" r="7" fill="#c25a43" stroke="#f8f1df" stroke-width="2"/>
+            <circle cx="372" cy="148" r="7" fill="#39423d" stroke="#f8f1df" stroke-width="2"/>
+          </svg>
+          <figcaption>
+            <span><i class="dot dot--cu" aria-hidden="true"></i>铜片 · 正极</span>
+            <span><i class="dot dot--zn" aria-hidden="true"></i>锌片 · 负极</span>
+            <span class="diagram__hint">电子从锌片出发，经导线流向铜片。</span>
+          </figcaption>
+        </figure>
+
+        <div class="how__copy reveal">
+          <ol class="steps3">
+            <li>
+              <span class="n" aria-hidden="true">1</span>
+              <div><h3>果汁会导电</h3><p>果酸溶于水，产生可以自由移动的离子。离子能移动，电路才有“路”可走。</p></div>
+            </li>
+            <li>
+              <span class="n" aria-hidden="true">2</span>
+              <div><h3>活泼性不同，才有电压</h3><p>锌比铜活泼，更容易失去电子，成为负极；铜成为正极。两种金属的“脾气”不同，才有电势差。</p></div>
+            </li>
+            <li>
+              <span class="n" aria-hidden="true">3</span>
+              <div><h3>电子过桥，化学能变成电能</h3><p>电子从锌片经导线流向铜片，电压表的指针偏转——这就是电流存在的证据。</p></div>
+            </li>
+          </ol>
+
+          <div class="polarity">
+            <div>
+              <span class="pole pole--pos" aria-hidden="true">＋</span>
+              <b>铜片 · 正极</b>
+              <small>电子流入的一端</small>
+            </div>
+            <div>
+              <span class="pole pole--neg" aria-hidden="true">－</span>
+              <b>锌片 · 负极</b>
+              <small>电子流出的一端</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 动手 ============ -->
+    <section class="sec sec--practice" id="practice" aria-labelledby="practice-title">
+      <header class="sec-head reveal">
+        <span class="sec-num" aria-hidden="true">03</span>
+        <div class="sec-head__text">
+          <h2 id="practice-title">动手：把水果变成电池</h2>
+          <p class="sec-en">MAKE IT</p>
+        </div>
+        <span class="sec-line" aria-hidden="true"></span>
+      </header>
+
+      <div class="practice">
+        <div class="practice__steps">
+          <ol class="steps">
+            <li class="reveal">
+              <span class="n" aria-hidden="true">01</span>
+              <div><h3>插电极</h3><p>铜片、锌片相隔 1–2&nbsp;cm 插入果肉，两片金属不要碰在一起。</p></div>
+            </li>
+            <li class="reveal">
+              <span class="n" aria-hidden="true">02</span>
+              <div><h3>接电表</h3><p>铜片接电压表的“＋”，锌片接“－”，量程选 3&nbsp;V。接反了指针会反向偏转。</p></div>
+            </li>
+            <li class="reveal">
+              <span class="n" aria-hidden="true">03</span>
+              <div><h3>读数、换变量</h3><p>记录读数，再换水果、换电极、多串几节，看看数字怎么变。</p></div>
+            </li>
+          </ol>
+
+          <div class="kit reveal">
+            <p class="kit__label">实验清单</p>
+            <ul>
+              <li>柚子 / 柠檬 / 苹果</li>
+              <li>铜片 / 锌片</li>
+              <li>导线 / 电压表 / 发光二极管</li>
+              <li>记录表</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="photo-mosaic">
+          <figure class="photo photo--main reveal">
+            <span class="tape" aria-hidden="true"></span>
+            <img src="images/6890ba6168754a0d72dff2594eed05d8.jpg"
+                 alt="四名男生坐在教学楼前的台阶上，围着一只插着电极的柚子，旁边放着指针式电压表"
+                 width="1917" height="1279" loading="lazy" decoding="async">
+            <figcaption>台阶就是实验台。</figcaption>
+          </figure>
+
+          <figure class="photo photo--tall reveal">
+            <span class="tape tape--small" aria-hidden="true"></span>
+            <img src="images/f26937030c7f15a41c48cd257f8b632f.jpg"
+                 alt="特写：一只手扶着柚子，指针式电压表接在铜片和锌片上，指针发生偏转"
+                 width="1917" height="1279" loading="lazy" decoding="async">
+            <figcaption>指针停在 0.4 V 附近。</figcaption>
+          </figure>
+
+          <figure class="photo photo--wide reveal">
+            <span class="tape tape--small" aria-hidden="true"></span>
+            <img src="images/f7d10a6ac1d580f13878294500544825.jpg"
+                 alt="三名学生围坐在台阶上讨论，其中一人手握柚子电池"
+                 width="2506" height="1673" loading="lazy" decoding="async">
+            <figcaption>问题，是在讨论里长出来的。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 测一测 ============ -->
+    <section class="sec sec--lab" id="lab" aria-labelledby="lab-title">
+      <header class="sec-head reveal">
+        <span class="sec-num" aria-hidden="true">04</span>
+        <div class="sec-head__text">
+          <h2 id="lab-title">测一测：换一个<span class="nowrap">变量</span>，电压会怎样？</h2>
+          <p class="sec-en">COMPARE</p>
+        </div>
+        <span class="sec-line" aria-hidden="true"></span>
+      </header>
+
+      <div class="lab">
+        <div class="lab__metercard reveal">
+          <p class="panel-label">实验台 <span>EXPERIMENT DESK</span></p>
+
+          <div class="meter" role="group" aria-label="模拟电压表">
+            <div class="meter__top">
+              <span>直流电压表</span>
+              <span>0–3 V</span>
+            </div>
+            <div class="meter__face">
+              <svg class="dial" viewBox="0 0 300 180" aria-hidden="true" focusable="false">
+                <path class="dial__arc" d="M56.7 101.7 A110 110 0 0 1 243.3 101.7"/>
+                <g class="dial__ticks" data-ticks></g>
+                <g class="dial__needle" data-needle style="transform:rotate(-58deg)">
+                  <line x1="150" y1="160" x2="150" y2="58"/>
+                </g>
+                <circle class="dial__pivot" cx="150" cy="160" r="7"/>
+                <text class="dial__unit" x="252" y="172">V</text>
+              </svg>
+            </div>
+            <div class="meter__readout" aria-hidden="true">
+              <span data-readout-num>0.42</span><span class="meter__unit">V</span>
+            </div>
+            <div class="meter__terminals">
+              <span class="terminal terminal--pos" data-terminal-pos>＋ 铜片</span>
+              <span class="terminal terminal--neg" data-terminal-neg>－ 锌片</span>
+            </div>
+          </div>
+
+          <div class="metercard__foot">
+            <p class="formula" data-formula>0.42 V × 1 节 ≈ 0.42 V</p>
+            <p class="fineprint">读数为按实验规律简化的估算值，用来比较变量，不等于真实测量。</p>
+          </div>
+        </div>
+
+        <div class="lab__controls reveal">
+          <fieldset class="control">
+            <legend>① 水果</legend>
+            <div class="chips" data-fruit-chips>
+              <button type="button" class="chip" data-fruit="lemon" data-name="柠檬" data-value="0.55" aria-pressed="false">柠檬</button>
+              <button type="button" class="chip" data-fruit="orange" data-name="橙子" data-value="0.48" aria-pressed="false">橙子</button>
+              <button type="button" class="chip" data-fruit="pomelo" data-name="柚子" data-value="0.42" aria-pressed="true">柚子</button>
+              <button type="button" class="chip" data-fruit="tomato" data-name="番茄" data-value="0.35" aria-pressed="false">番茄</button>
+              <button type="button" class="chip" data-fruit="apple" data-name="苹果" data-value="0.30" aria-pressed="false">苹果</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="control">
+            <legend>② 电极</legend>
+            <div class="chips" data-pair-chips>
+              <button type="button" class="chip" data-pair="cuzn" data-name="铜片 + 锌片" data-factor="1" data-pos="铜片" data-neg="锌片" aria-pressed="true">铜片 + 锌片</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="control">
+            <legend>③ 串联几节</legend>
+            <div class="chips chips--seg" data-series-chips>
+              <button type="button" class="chip" data-series="1" aria-pressed="true">1 节</button>
+              <button type="button" class="chip" data-series="2" aria-pressed="false">2 节</button>
+              <button type="button" class="chip" data-series="3" aria-pressed="false">3 节</button>
+              <button type="button" class="chip" data-series="4" aria-pressed="false">4 节</button>
+            </div>
+          </fieldset>
+
+          <div class="verdict" aria-live="polite">
+            <p class="verdict__main" data-verdict>1 节柚子电池，铜片 ＋ / 锌片 －，电压约 0.42 V。</p>
+            <p class="verdict__sub" data-verdict-sub>水果电池的电压很小，但足够让指针轻轻偏转。</p>
+          </div>
+
+          <div class="led" data-led>
+            <span class="led__bulb" aria-hidden="true"></span>
+            <span class="led__text" data-led-text>LED 未点亮</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="data reveal">
+        <div class="data__chart">
+          <div class="data__head">
+            <h3>单节电压对照</h3>
+            <p>铜片—锌片 · 3 V 档 · 课堂实测均值</p>
+          </div>
+          <ul class="bars" aria-label="不同水果的单节电压对照">
+            <li class="bar" data-fruit="lemon">
+              <span class="bar__label">柠檬</span>
+              <span class="bar__track"><span class="bar__fill" style="--w:91.7%"></span></span>
+              <span class="bar__value">0.55<small>V</small></span>
+            </li>
+            <li class="bar" data-fruit="orange">
+              <span class="bar__label">橙子</span>
+              <span class="bar__track"><span class="bar__fill" style="--w:80%"></span></span>
+              <span class="bar__value">0.48<small>V</small></span>
+            </li>
+            <li class="bar is-active" data-fruit="pomelo">
+              <span class="bar__label">柚子</span>
+              <span class="bar__track"><span class="bar__fill" style="--w:70%"></span></span>
+              <span class="bar__value">0.42<small>V</small></span>
+            </li>
+            <li class="bar" data-fruit="tomato">
+              <span class="bar__label">番茄</span>
+              <span class="bar__track"><span class="bar__fill" style="--w:58.3%"></span></span>
+              <span class="bar__value">0.35<small>V</small></span>
+            </li>
+            <li class="bar" data-fruit="apple">
+              <span class="bar__label">苹果</span>
+              <span class="bar__track"><span class="bar__fill" style="--w:50%"></span></span>
+              <span class="bar__value">0.30<small>V</small></span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="data__note">
+          <p class="data__note-title">读图提示</p>
+          <p>同一种水果，换一对电极，电压也会变：铜—锌约为 1.0 倍，铜—铁约为 0.6 倍，两块都是铜片时几乎为 0。</p>
+          <p>串联时，电压相加，但电流几乎不变。这也是为什么四节柠檬电池能凑到 2.2&nbsp;V，却依然点不亮小灯泡。</p>
+        </aside>
+      </div>
+    </section>
+
+      <div class="conclusion reveal">
+        <span class="seal" aria-hidden="true">物理小组</span>
+        <p class="conclusion__label">我们的结论</p>
+        <p class="conclusion__lead">水果电池不是魔法，<br>而是一次看得见的能量<span class="nowrap">转换</span>。</p>
+        <div class="conclusion__cols">
+          <p><b>它做到了</b>把化学能变成电能，让电压表有了读数，也让“电路”第一次变得具体。</p>
+          <p><b>它做不到</b>电压不足 1 V、电流很小，带不动小灯泡，更不可能替代真正的电池。</p>
+        </div>
+        <p class="conclusion__foot">但它和手机里的锂电池、汽车里的蓄电池，遵循同一个思路：用化学反应搬运电荷。</p>
+      </div>
+    </section>
+
+    <!-- ============ 页脚 ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <p class="footer__title">把生活，做成一节电池。</p>
+        <p class="footer__meta">初中物理 · 跨学科实践小报 <span>/</span> 2026 秋</p>
+        <p class="footer__credit">蒋励 / 金子豪 / 张梓杨 / 朱毅阳</p>
+      </div>
+      <div class="footer__actions no-print">
+        <a class="to-top" href="#top">回到开头 <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
